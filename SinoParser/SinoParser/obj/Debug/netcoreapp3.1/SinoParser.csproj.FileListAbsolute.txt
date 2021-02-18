@@ -1,0 +1,26 @@
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.exe
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.deps.json
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.runtimeconfig.json
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.runtimeconfig.dev.json
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.dll
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.pdb
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.csprojAssemblyReference.cache
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.AssemblyInfoInputs.cache
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.AssemblyInfo.cs
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.csproj.CoreCompileInputs.cache
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.dll
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.pdb
+C:\Users\Onsla\source\repos\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.genruntimeconfig.cache
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.exe
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.deps.json
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.runtimeconfig.json
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.runtimeconfig.dev.json
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.dll
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\bin\Debug\netcoreapp3.1\SinoParser.pdb
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.csprojAssemblyReference.cache
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.AssemblyInfoInputs.cache
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.AssemblyInfo.cs
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.csproj.CoreCompileInputs.cache
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.dll
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.pdb
+C:\Users\Onsla\OneDrive\Desktop\Sinoalice SQL\SinoParser\SinoParser\obj\Debug\netcoreapp3.1\SinoParser.genruntimeconfig.cache

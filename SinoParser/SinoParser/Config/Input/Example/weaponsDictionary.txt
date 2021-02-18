@@ -1,0 +1,478 @@
+Name,Type,targets,damage,recovery,patk,matk,pdef,mdef,Elemental
+Holy Water Rite,HARP,1.5,0,0,0,0,0,1.5,WATER
+Trumpet Gun of Depravity,HARP,1.5,0,0,0,0.9,0,0,WATER
+Bow of Wilderness,BOW,1,2.5,0,0,0,0,0,WIND
+Intent of Dependence,HAMMER,1.5,2.3,0,0,0,0,0,WIND
+Intent of Justice,TOME,1.5,0,0,0.9,0,0,0,FIRE
+Staff of Misery,STAFF,1,0,3,0,0,0,0,FIRE
+Parasitic Halberd,SPEAR,1.5,2.1,0,0,0,0,0.5,FIRE
+Flame Vice Staff,STAFF,1.5,0,2.34,0.3,0,0,0,FIRE
+Love Bird's Song,HARP,2,0,0,0,0.66,0,0,WIND
+Moonlight Sutras,TOME,2,0,0,0,0,1.2,0,WATER
+Mystical Blade,SWORD,1,2.5,0,0,0,0.5,0,WATER
+Bludgeon of Flames,HAMMER,1.5,2.1,0,0,0,0.5,0,FIRE
+Silent Prayer Staff,STAFF,2,0,2.25,0,0,0,0,WIND
+Harp of Shared Poetry,HARP,1,0,0,0.96,0.96,0,0,WIND
+Trash Spear,SPEAR,1.5,2.1,0,0,0.3,0,0,WATER
+King's Law,TOME,1.5,0,0,0.84,0,1.36,0,FIRE
+Criminal's Staff,STAFF,1,0,3,0,0,0,0,FIRE
+Scythe of Justice,SPEAR,1.5,2.1,0,0,0.3,0,0,WIND
+Beast Axe,HAMMER,1.5,2.3,0,0,0,0,0,WIND
+Absolute Zero,BOW,1,1.8,0,0,0.3,0,0,WATER
+Accursed Gun,BOW,1,2.5,1.2,0,0,0,0,FIRE
+Alternate Life,SPEAR,1.5,1.5,1.2,0,0,0,0,WATER
+Ancestral Double Axe,HAMMER,1.5,1.7,0,0,0,0,0,WIND
+Ancient Elven Bow,BOW,1,2,0,0,0,0,0,FIRE
+Ancient Violin,HARP,2,0,0,0,0,1.06,1.06,WIND
+Apprentice's Staff,STAFF,1,0,1.8,0,0,0,0,FIRE
+Arm of Bondage,SWORD,1,2.7,0,0,0,0,0,WATER
+Artisan's Spear,SPEAR,1.5,2.1,0,0,0.3,0,0,WIND
+Assassin's Kit,HAMMER,1.5,1.4,0,0,0,0,0,FIRE
+Assassin's Notes,TOME,1.5,0,0,0,0.84,0,1.36,WIND
+Astrologer's Manastone,ORB,1.5,2.3,0,0,0,0,0,FIRE
+Astronomy Book,TOME,2,0,0,0,0,0,1.2,WIND
+Automaton Clock,ORB,1.5,2.3,0,0,0,0,0,FIRE
+Axe of Masochism,HAMMER,1.5,2.1,0,0.3,0,0,0,WIND
+Axe of Paranoia,HAMMER,1.5,1.7,0,0,0,0,0,WATER
+Axe of Ruin,HAMMER,1.5,2.1,0,0.3,0,0,0,WIND
+Azure Blade,SWORD,1,2,0,0,0,0,0,WATER
+Azure Wing Crossbow,BOW,1,1.8,1.2,0,0,0,0,WIND
+Banned Book of Resurrection,TOME,1,0,0,0.7,0.7,0,0,WATER
+Beast Puppet,ORB,1.5,2.3,0,0,0,0,0,WATER
+Beastlord,HAMMER,1.5,2.1,0,0.3,0.3,0,0,WATER
+Beggar's Secrets,TOME,1,0,0,1.06,0,0,0,WATER
+Bell Staff,STAFF,1.5,0,2.33,0,0,0,0,FIRE
+Big Bad Bow,BOW,1,2,0,0,0,0,0,WATER
+Big Talk,STAFF,1,0,2.25,0,0,0,0,FIRE
+Black Axe of Brutality,HAMMER,1.5,2.1,0,0,0,0.5,0,FIRE
+Black Holy Grail,ORB,1.5,2.1,1.2,0,0,0,0,WATER
+Black Iron Antique,TOME,2,0,0,0,0,1.2,0,FIRE
+Black Iron Book,TOME,1.5,0,0,0,0,0,1.5,WIND
+Black Iron Bow,BOW,1,2.5,0,0,0.3,0,0.5,WIND
+Black Iron Hammer,HAMMER,1.5,2.1,0,0,0,0.5,0.5,WATER
+Black Iron Harp,HARP,1,0,0,0,1.06,0,0,WATER
+Black Iron Spear,SPEAR,1.5,2.1,0,0,0,0.5,0.5,WIND
+Black Iron Staff,STAFF,2,0,2.25,0,0,0,0,WATER
+Black Iron Sword,SWORD,1,2.5,0,0.3,0,0.5,0,FIRE
+Black Iron Sword Cane,STAFF,1,0,3,0,0,0,0,WIND
+Black Iron Violin,HARP,1,0,0,1.06,0,0,0,FIRE
+Black Knight's Soul,ORB,1.5,2.1,0,0,0.3,0,0,FIRE
+Black Spear of Bondage,SPEAR,1.5,2.1,0,0,0,0,0.5,WATER
+Black Staff of Languor,STAFF,1,0,2.78,0,0,0,0.5,WATER
+Black Winged Scythe,SPEAR,1.5,1.7,0,0,0,0,0,WATER
+Blade of Depravity,SWORD,1,2.5,1.2,0,0,0,0,WIND
+Blade of the Eye,SWORD,1,2,0,0,0,0,0,FIRE
+Blessed Crash,HARP,1,0,0,0.7,0.7,0,0,FIRE
+Blessed Violin,HARP,1,0,0,0,0,0,0,WATER
+Blessing Staff,STAFF,2,0,2.04,0,0.3,0,0,WATER
+Book of Ancient Ruins,TOME,1,0,0,0,0,1.66,1.66,WIND
+Book of Brutality,TOME,1,0,0,0,0,1.8,0,FIRE
+Book of Dark Rituals,TOME,1,0,0,0.76,0,0,0,WATER
+Book of Judgment,TOME,2,0,0,0,0,0.72,0.72,WIND
+Book of Justice,TOME,1,0,0,0,0,1.8,0,FIRE
+Book of Observation,TOME,1.5,0,0,0.84,0,1.36,0,WIND
+Book of Regret,TOME,2,0,0,0.42,0.42,0,0,FIRE
+Bow of Bondage,BOW,1,2.5,0,0,0.3,0,0,FIRE
+Brutal Intent,HAMMER,1.5,2.1,0,0,0,0,0,FIRE
+Brutality's Tool,HAMMER,1.5,2.3,0,0,0,0,0,FIRE
+Burning Satiation,HARP,2,0,0,0,0,0.72,0.72,WATER
+Calamitous Bow,BOW,1,1.6,0,0,0,0,0,FIRE
+Cardinal Flute,HARP,2,0,0,0,0,0.72,0.72,FIRE
+Castle Gate Notes,TOME,1,0,0,0,0.76,0,0,FIRE
+Ceremonial Spear,SPEAR,1.5,2.1,0,0,0.3,0,0,FIRE
+Chaotic Desire,TOME,1,0,0,0,0,0.65,0.65,FIRE
+Chivalric Order​'s Violin,HARP,1.5,0,0,0,0,0,0,WIND
+Clairvoyant Staff,STAFF,1,0,2.25,0,0,0,0,FIRE
+Coastal Rain,SWORD,1,2.5,0,0.3,0,0,0,WATER
+Cold Brutality,SWORD,1,2.7,0,0,0,0,0,WIND
+Commandment Violin,HARP,1,0,0,1.06,0,0,0,WATER
+Composer's Magnum Opus,HARP,1,0,0,0,0,0,0,WATER
+Conjuring Agreement,TOME,1.5,0,0,0.84,0.84,0,0,WIND
+Conqueror's Sword,SWORD,1,2,0,0.3,0,0,0,FIRE
+Cool Breeze,HARP,1.5,0,0,0,0,0,1.5,WIND
+Corpse Sounds,HARP,2,0,0,0.66,0,0,0,WIND
+Corpse Staff,STAFF,1.5,0,2.34,0,0.3,0,0,WATER
+Criminal's Heart,SWORD,1,1.6,0,0,0,0,0,WIND
+Crimson Jewel,ORB,1.5,1.5,1.2,0,0,0,0,FIRE
+Cruel Arrogance,SPEAR,1.5,2.3,0,0,0,0,0,WATER
+Crusher of Gluttony,SWORD,1,2.5,1.2,0,0,0,0,FIRE
+Crystal Ball,ORB,1.5,1.4,0,0,0,0,0,WATER
+Cumbersome Staff,STAFF,1.5,0,1.8,0,0,0,0,WIND
+Cursed Chains,ORB,1.5,1.7,0,0,0,0,0,WIND
+Cursed Ghost Song,HARP,1,0,0,0.7,0.7,0,0,WIND
+Dagger of Bonding,SWORD,1,1.8,1.2,0,0,0,0,WATER
+Dagger of the Covenant,SWORD,1,1.6,0,0,0,0,0,FIRE
+Dancer's Fan,TOME,1,0,0,0.96,0,1.06,0,FIRE
+Dark Puppet,ORB,1.5,1.7,0,0,0,0,0,FIRE
+Dark Spider Crossbow,BOW,1,1.8,0,0,0.3,0,0,FIRE
+Darkness Eluded Umbrella,ORB,1.5,2.1,0,0,0,0,0,FIRE
+Death and Agony,HAMMER,1.5,1.5,0,0,0,0.5,0.5,WATER
+Death God's Bow,BOW,1,2.5,1.2,0,0,0,0,WATER
+Death-Bringing Weather Vane,ORB,1.5,2.1,0,0,0.3,0,0,WATER
+Death's Grandeur,BOW,1,2,0,0,0,0,0,WIND
+Death's Remains,HAMMER,1.5,1.5,1.2,0,0,0,0,WIND
+Deceptive Eye,SPEAR,1.5,1.7,0,0,0,0,0,WIND
+Decimation Spear,SPEAR,1.5,1.4,0,0,0,0,0,WATER
+Deep Sea Bow,BOW,1,2.7,0,0,0,0,0,WATER
+Deep Sea Staff,STAFF,1.5,0,2.33,0,0,0,0,FIRE
+Deep Sea Sword,SWORD,1,2.5,1.2,0,0,0,0,WIND
+Defiant Bird Spear,SPEAR,1.5,2.3,0,0,0,0,0,WIND
+Demon Spear,SPEAR,1.5,1.5,1.2,0,0,0,0,WIND
+Demonic Arm,TOME,1.5,0,0,0,0,1.5,0,FIRE
+Demonic Coercion,BOW,1,2.7,0,0,0,0,0,FIRE
+Demonic Violin,HARP,2,0,0,0,0.66,0,0,FIRE
+Devilish Staff,STAFF,1.5,0,1.35,0,0,0,0,WATER
+Devil's Fife,HARP,1,0,0,0.7,0.7,0,0,WIND
+Devola & Popola's Staff,STAFF,2,0,2.25,0,0,0,0,WIND
+Discord,HARP,1,0,0,1.06,0,0,0,WATER
+Distant Spinel,ORB,1.5,2.1,0,0,0,0,0.5,WATER
+Double-Edged Sword,SWORD,1,2,0,0,0,0,0,WIND
+Draconic Strings of Silence,HARP,1.5,0,0,0.9,0,0,0,WATER
+Dragon Gem,ORB,1.5,2.1,0,0,0.3,0,0,FIRE
+Dragon God's Parting Gift,STAFF,2,0,2.25,0,0,0,0,WATER
+Dragon God's Prayer,ORB,1.5,2.3,0,0,0,0,0,WATER
+Dragon Scythe,SPEAR,1.5,1.4,0,0,0,0,0,FIRE
+Dwarven Spear,SPEAR,1.5,2.3,0,0,0,0,0,WATER
+Ebony Scythe,SPEAR,1.5,2.1,0,0,0.3,0,0,WIND
+Ebony Staff,STAFF,2,0,2.25,0,0,0,0,FIRE
+Ebony Sword,SWORD,1,2.7,0,0,0,0,0,WATER
+Embodiment of Love,SWORD,1,2,0,0,0,0,0,FIRE
+Emil's Head,ORB,1.5,1.7,0,0,0,0,0,WATER
+Empty Teachings,TOME,2,0,0,0,0,0.72,0.72,WIND
+Enchanting Hammer,HAMMER,1.5,1.5,0,0,0,0.5,0.5,WATER
+Engraved Blue Staff,STAFF,2,0,1.5,0,0,0,0,WATER
+Entrails of Justice,STAFF,1,0,3,0,0,0,0,FIRE
+Everlasting Prosperity,SPEAR,1.5,2.1,0,0,0,0,0.5,WATER
+Executioner's Pride,SPEAR,1.5,2.1,0,0,0.3,0,0,FIRE
+Explosive Javelin,SPEAR,1.5,1.5,0,0,0.3,0,0,WIND
+F8 Magical Pistol,BOW,1,1.8,1.2,0,0,0,0,WIND
+Fairy Blaster,BOW,1,1.6,0,0,0,0,0,WATER
+Fairy Song,ORB,1.5,1.4,0,0,0,0,0,WATER
+Faithful Follower,ORB,1.5,1.7,0,0,0,0,0,WIND
+False Bow Gun,BOW,1,2,0,0,0,0,0,FIRE
+False Victor,SWORD,1,2.7,0,0,0,0,0,WATER
+Farmer's Bow,BOW,1,1.6,0,0,0,0,0,FIRE
+Fencer's Foil,SWORD,1,2,0,0,0,0,0,FIRE
+Fiddle of Delusion,HARP,2,0,0,0,0,1.2,1.2,FIRE
+Final Prophecy,TOME,2,0,0,0,0,1.2,0,WATER
+Flag of a Ruined Country,HAMMER,1.5,2.1,0,0,0,0.5,0,WATER
+Flail of Masochism,HAMMER,1.5,2.1,0,0.3,0,0,0,WIND
+Flaming Sword,SWORD,1,2.5,0,0,0,0.5,0.5,FIRE
+Flood Records,TOME,1,0,0,0.7,0.7,0,0,WATER
+Flute of Dependence,HARP,1,0,0,0,1.06,0,0,WIND
+Flute of Despair,HARP,1,0,0,1.06,0,0,0,WIND
+Flute of Excess,HARP,2,0,0,0,0,0.65,0.65,WIND
+Flute of Sunlight,HARP,1.5,0,0,0.9,0.9,0,0,FIRE
+Fool's Desire,ORB,1.5,2.3,0,0,0,0,0,WATER
+Forbidden Staff,STAFF,1,0,2.04,0,0.3,0,0,WIND
+Foreign Book,TOME,2,0,0,0,0,0.58,0.58,WIND
+Forest Aid,STAFF,1,0,2.25,0,0,0,0,WIND
+Forest Bow,BOW,1,2,0,0,0,0,0,WIND
+Forest of Darkness,HARP,1.5,0,0,0,0.9,0,0,WIND
+Giant's Hand Axe,HAMMER,1.5,2.1,1.2,0,0,0,0,FIRE
+Giant's Right Hand,HAMMER,1.5,2.1,0,0,0,0.5,0,WIND
+Ginger Sage (Part I),STAFF,1,0,2.78,0,0,0,0.5,WIND
+Ginger Sage (Part II),STAFF,1.5,0,2.25,0,0,0,0,WIND
+Gluttonous God's Rod,HAMMER,1.5,2.1,0,0.3,0,0,0,WIND
+Gluttonous Scythe,SPEAR,1.5,2.3,0,0,0,0,0,WIND
+Golden Bow,BOW,1,2,0,0,0,0,0,WATER
+Golden Harp,HARP,1,0,0,0,0,0,1.8,WIND
+Golden Staff,STAFF,1,0,2.78,0.3,0,0,0,WATER
+Golden Sword,SWORD,1,2.5,0,0.3,0,0,0,FIRE
+Gourmand's Special,SWORD,1,2,0,0,0,0,0,WATER
+Great Sword of Honor,SWORD,1,2.5,0,0.3,0,0,0,WIND
+Great Sword of Nature,SWORD,1,2.5,0,0.3,0.3,0,0,WIND
+Great Sword of Revenge,SWORD,1,2,0,0,0,0,0,WIND
+Grimoire Noir,TOME,1,0,0,0,0,1.24,1.24,WIND
+Grimoire Weiss,TOME,1.5,0,0,0,0.9,0,0,WIND
+Grudge Hammer,HAMMER,1.5,1.5,1.2,0,0,0,0,FIRE
+Guided Gun,BOW,1,2,0,0,0,0,0,WATER
+Gun of Bondage,BOW,1,2.7,0,0,0,0,0,WIND
+Gun of Imperial Wrath,BOW,1,2.7,0,0,0,0,0,WATER
+Gun of Incineration,BOW,1,2.7,0,0,0,0,0,FIRE
+Gun of Misery,BOW,1,2.5,0,0,0.3,0,0,WATER
+Gun of Obsession,BOW,1,2.5,0,0,0.3,0,0,FIRE
+Gun of Pure Judgment,BOW,1,2,0,0,0,0,0,WATER
+Halberd of Deceit,SPEAR,1.5,1.7,0,0,0,0,0,WIND
+Halberd of Masochism,SPEAR,1.5,2.1,0,0,0,0,0.5,WATER
+Halberd of Revenge,SPEAR,1.5,1.5,0,0,0,0,0.5,FIRE
+Halua Head,ORB,1,2.5,0,0,0,0,0,WIND
+Hammer of Brutality,HAMMER,1.5,1.4,0,0,0,0,0,WIND
+Hammer of Delusion,HAMMER,1.5,2.3,0,0,0,0,0,WATER
+Hammer of Depravity,HAMMER,1.5,1.5,0,0,0,0.5,0.5,FIRE
+Hammer of Endtimes,HAMMER,1.5,2.3,0,0,0,0,0,WIND
+Hammer of Justice,HAMMER,1.5,2.3,0,0,0,0,0,WIND
+Harp of Brutality,HARP,1.5,0,0,0,0,0,1.5,FIRE
+Harp of Collection,HARP,2,0,0,0.4,0.4,0,0,FIRE
+Harp of Misery,HARP,1.5,0,0,0,0,1.5,0,WATER
+Harp of the Valiant,HARP,1.5,0,0,0,0,1.36,1.36,FIRE
+Harpy's Harp,HARP,1,0,0,0,1.06,0,0,FIRE
+Heatwave,HARP,1,0,0,1,0,0,0,FIRE
+Hero's Sword,SWORD,1,2,0,0,0,0,0,WIND
+Hollow Spear,SPEAR,1.5,1.5,0,0,0.3,0,0,WATER
+Holy Dragon Lance,SPEAR,1.5,2.1,0,0,0.3,0,0,WATER
+Holy Knight's Bow,BOW,1,2.7,0,0,0,0,0,WIND
+Holy Knight's Pistol,BOW,1,2.5,1.2,0,0,0,0,WIND
+Holy Lance,SPEAR,1.5,1.4,0,0,0,0,0,WIND
+Hunter's Soul,SPEAR,1.5,2.3,0,0,0,0,0,FIRE
+Hunter's Spirit,BOW,1,2,0,0,0,0,0,FIRE
+Hunting Bow of Delusion,BOW,1,2.7,0,0,0,0,0,FIRE
+Hunting Bow of Misery,BOW,1,2.5,0,0,0,0,0.5,WIND
+Hydra's Spear,SPEAR,1.5,2.1,0,0,0,0.5,0.5,WATER
+Icicle Scythe,SPEAR,1.5,1.7,0,0,0,0,0,WATER
+Idol's Harp,HARP,1,0,0,0.6,0,0,0,FIRE
+Illusionary Scythe,SPEAR,1.5,1.7,0,0,0,0,0,FIRE
+Imanotsurugi,SWORD,1,2.5,1.2,0,0,0,0,FIRE
+Immortal Flute,HARP,1,0,0,0,1.06,0,0,WATER
+Imperial Scout's Notes,TOME,1,0,0,0,0,0,1.8,WIND
+Indiscriminate Gun,BOW,1,2.5,0,0,0.3,0,0,WIND
+Innocent Eyes,ORB,1.5,2.1,0,0,0.3,0,0,FIRE
+Insect Harp,HARP,1,0,0,0,1.06,0,0,WIND
+Instrument Artisan's Flail,HAMMER,1.5,2.1,1.2,0,0,0,0,FIRE
+Intent of Curiosity,HAMMER,1.5,2.1,0,0,0,0.5,0,FIRE
+Intent of Delusion,SPEAR,1.5,2.1,0,0,0,0,0.5,WIND
+Intent of Depravity,BOW,1,2.5,0,0,0.3,0,0,FIRE
+Intent of Languor,TOME,1.5,0,0,0,0,1.36,1.36,WIND
+Invader's Gun,BOW,1,2.5,1.2,0,0,0,0,WIND
+Invader's Spear of Gluttony,SPEAR,1.5,2.1,0,0,0,0,0.5,WATER
+Invader's Staff of Masochism,STAFF,1.5,0,2.34,0,0.3,0,0,WATER
+Invader's Sword,SWORD,1,2.5,0,0.3,0.3,0,0,WATER
+Iron Pipe,HAMMER,1.5,1.5,0,0,0,0.5,0.5,WATER
+Iron Will,SWORD,1,1.8,0,0.3,0,0,0,WIND
+Irrational Conviction,STAFF,1.5,0,2.34,0,0,0,0,WATER
+Irreconcilable Enemy,STAFF,2,0,2.25,0,0,0,0,FIRE
+Jester's Scythe,SPEAR,1.5,1.7,0,0,0,0,0,WIND
+Jewel of Intellect,ORB,1.5,1.5,1.2,0,0,0,0,WIND
+Jug of Death,ORB,1.5,1.7,0,0,0,0,0,WATER
+Kainé's Sword,SWORD,1,2.7,0,0,0,0,0,WIND
+Kamaitachi's Halberd,SPEAR,1.5,1.6,0,0,0.3,0,0,WIND
+Key of Hatred,ORB,1.5,1.7,0,0,0,0,0,WATER
+Knighthood Club,HAMMER,1.5,2.1,0,0.3,0,0,0,FIRE
+Knight's Diary,TOME,1,0,0,1.06,0,0,0,WIND
+Labyrinth's Song,SWORD,1,2,0,0,0,0,0,WIND
+Lady's Harp,HARP,2,0,0,0.36,0.36,0,0,WATER
+Lance of Justice,SPEAR,1.5,2.1,0,0,0,0,0,WATER
+Languorous Gun,BOW,1,2.7,0,0,0,0,0,WIND
+Lion Killer's Iron Hammer,HAMMER,1.5,1.7,0,0,0,0,0,WATER
+Lovely Violin,HARP,2,0,0,0,0,0.65,0.65,FIRE
+Loving Blades,SWORD,1,1.6,0,0,0,0,0,WATER
+Lusty God's Lantern,ORB,1.5,2.3,0,0,0,0,0,WIND
+Mad Demon,HAMMER,1.5,1.7,0,0,0,0,0,WIND
+Magma Axe,HAMMER,1.5,1.7,0,0,0,0,0,FIRE
+Maiden's Purity,SPEAR,1.5,1.4,0,0,0,0,0,WATER
+Mallet of Dependence,HAMMER,1.5,2.1,0,0,0,0.5,0,WIND
+Mask of Pride,ORB,1.5,2.1,0,0,0,0,0.5,WIND
+Masochism's Intent,STAFF,2,0,2.04,0,0,0,0.5,WATER
+Master's Teachings,SWORD,1,2,0,0,0,0,0,WATER
+Maul of Carnage,HAMMER,1.5,1.4,0,0,0,0,0,WATER
+Meat Pulverizer,HAMMER,1.5,1.7,0,0,0,0,0,FIRE
+Mechanical Hammer,HAMMER,1.5,2.1,0,0.3,0,0,0,WATER
+Mechanical Spear,SPEAR,1.5,2.3,0,0,0,0,0,FIRE
+Mechanical Whale,ORB,1.5,2.3,0,0,0,0,0,WIND
+Medical Book of Darkness,TOME,1.5,0,0,0.84,0.84,0,0,WIND
+Mirror to the World,ORB,1.5,1.7,0,0,0,0,0,WATER
+Miserable Intent,HARP,1,0,0,0.96,0.96,0,0,WATER
+Modern Palace Records,TOME,1,0,0,0,0,1.36,0,WIND
+Monk's Staff,STAFF,2,0,1.5,0,0,0,0,FIRE
+Mumei,HAMMER,1.5,2.1,0,0,0,0.5,0.5,FIRE
+Naive Miracle Staff,STAFF,1,0,3,0,0,0,0,WATER
+Nameless Sword,SWORD,1,1.6,0,0,0,0,0,WIND
+No. 7's Staff,STAFF,1,0,3,0,0,0,0,WATER
+Nocturne's Sword,SWORD,1,2,0,0,0,0,0,WATER
+Oar Hammer,HAMMER,1.5,1.7,0,0,0,0,0,WATER
+Oblivion Staff,STAFF,1,0,3,0,0,0,0,WIND
+Oblivion's Intent,HAMMER,1.5,1.4,0,0,0,0,0,WATER
+Omniscient Book,TOME,1.5,0,0,0,0.9,0,0,WATER
+One Wish,ORB,1.5,1.7,0,0,0,0,0,FIRE
+One's Beloved Staff,STAFF,2,0,2.04,0,0.3,0,0,WIND
+Oracle Knight's Axe,HAMMER,1.5,1.4,0,0,0,0,0,WIND
+Origin of Chaos,TOME,1,0,0,0.96,0.96,0,0,FIRE
+Origin of Control,HARP,2,0,0,0.36,0.36,0,0,WATER
+Origin of Crystal,SPEAR,1.5,2.1,0,0,0.3,0,0,WIND
+Origin of Flames,HAMMER,1.5,2.1,0,0.3,0,0,0,FIRE
+Origin of Light,SWORD,1,2.5,1.2,0,0,0,0,FIRE
+Origin of Temptation,HARP,1,0,0,0.96,0.96,0,0,WIND
+Origin of Tides,BOW,1,2.5,1.2,0,0,0,0,WATER
+Origin of Truth,ORB,1.5,2.1,0,0,0.3,0,0,WATER
+Origin of Venom,STAFF,1,0,3,0,0,0,0,WIND
+Otherworldly Chronicles,TOME,2,0,0,0.34,0.34,0,0,FIRE
+Otherworldly Sign,TOME,1.5,0,0,0,0,1.5,0,WIND
+Pagan Bludgeon,HAMMER,1.5,2.1,0,0,0,0.5,0,FIRE
+Pagan Mask,ORB,1.5,2.1,0,0,0,0,0.5,WATER
+Pagan Scripture,TOME,1,0,0,0,0,0,1.8,WIND
+Pagan Staff,STAFF,1.5,0,2.34,0,0,0,0.5,WIND
+Path of Regret,ORB,1.5,2.1,0,0,0,0,0.5,WATER
+Penetrating Spear,SPEAR,1.5,2.3,0,0,0,0,0,WIND
+Petals of Resurrection,ORB,1.5,1.7,0,0,0,0,0,WATER
+Phoenix Lance,SPEAR,1.5,1.7,0,0,0,0,0,WIND
+Pike of Bondage,SPEAR,1.5,2.3,0,0,0,0,0,WATER
+Pink Harp,HARP,2,0,0,0,0,0.72,0.72,WIND
+Pistol of Depravity,BOW,1,2.5,0,0,0.3,0,0,FIRE
+Plume Violin,HARP,1.5,0,0,0.98,0.98,0,0,WIND
+Poet's Harp,HARP,1,0,0,0.54,0.54,0,0,FIRE
+Possessed Halberd,SPEAR,1.5,1.7,0,0,0,0,0,FIRE
+Precise Bow,BOW,1,1.6,0,0,0,0,0,WIND
+Princess' Pillage,BOW,1,2,0,0,0,0,0,FIRE
+Promise of Life,SWORD,1,2.5,0,0,0,0.5,0.5,WIND
+Proof of Hypocrisy,STAFF,2,0,1.5,0,0,0,0,WATER
+Proof of Loyalty,ORB,1.5,1.5,1.2,0,0,0,0,FIRE
+Proof of Virtue,STAFF,1,0,2.25,0,0,0,0,WIND
+Puppeteer's Magic,ORB,1.5,1.4,0,0,0,0,0,WIND
+Rake of Languor,HAMMER,1.5,2.1,0,0,0,0.5,0.5,WIND
+Rebirth Gem,ORB,1.5,2.3,0,0,0,0,0,FIRE
+Record of Humanity,TOME,1,0,0,1.06,0,0,0,WATER
+Red Snake Blade,SWORD,1,2.7,0,0,0,0,0,FIRE
+Reincarnation,STAFF,1,0,2.04,0,0.3,0,0,WATER
+Reluctant Rendezvous,HARP,2,0,0,0,0,0,0,WATER
+Research Syringe,BOW,1,2.5,0,0,0.3,0,0,WIND
+Retainer's Hammer,HAMMER,1.5,2.1,0,0.3,0,0,0,FIRE
+Reunion Whistle,HARP,1,0,0,0,0,1.66,1.66,FIRE
+Revolutionary's Maul,HAMMER,1.5,1.7,0,0,0,0,0,WATER
+Risen Staff,STAFF,1,0,3,0,0,0,0,FIRE
+Roster of Brutality,TOME,1.5,0,0,0.84,0,1.36,0,WATER
+Ruined Gun,BOW,1,1.6,0,0,0,0,0,WIND
+Sacred Bird Arbalest,BOW,1,2.5,0,0,0,0,0.5,WATER
+Sands of Time,STAFF,1,0,2.25,0,0,0,0,WIND
+Savage Crossbow,BOW,1,2,0,0,0,0,0,WIND
+Scales of Fortune,ORB,1.5,1.4,0,0,0,0,0,FIRE
+Scaly Bow,BOW,1,2.5,0,0,0,0,0.5,FIRE
+Scaly Staff,STAFF,1.5,0,2.25,0,0,0,0,WIND
+Scaly Violin,HARP,2,0,0,0,0,1.06,1.06,WIND
+Scarlet Sword,SWORD,1,2,0,0,0,0,0,FIRE
+Scepter of Power,STAFF,1.5,0,1.35,0,0,0,0,FIRE
+Scholarly Book of Curiosity,TOME,1.5,0,0,0,0.9,0,0,FIRE
+Scripture of the Dead,TOME,2,0,0,0,0,0.72,0.72,FIRE
+Scroll of the Black Dragon,TOME,2,0,0,0,0,0,1.2,FIRE
+Scythe of Misery,SPEAR,1.5,2.1,0,0,0,0,0.5,WIND
+Sealed Dragon Puppet,ORB,1.5,2.1,0,0,0.3,0,0,FIRE
+Sealed Water,HARP,1.5,0,0,0,0,1.5,0,WATER
+Secret Map,TOME,2,0,0,0.42,0.42,0,0,FIRE
+Senhime's Great Axe,HAMMER,1.5,1.6,0,0.3,0,0,0,FIRE
+Shameless Ambition,SWORD,1,2.7,0,0,0,0,0,FIRE
+Shears of Fate,ORB,1.5,1.7,0,0,0,0,0,WATER
+Shell Book,TOME,1,0,0,0,0,0,0,WATER
+Shell Bow,BOW,1,1,0,0,0,0,0,WIND
+Shell Harp,HARP,1,0,0,0,0,0,0,WIND
+Shell Spear,SPEAR,1.5,1.4,0,0,0,0,0,WATER
+Shell Staff,STAFF,1,0,1.2,0,0,0,0,WATER
+Shell Sword,SWORD,1,1,0,0,0,0,0,FIRE
+Shell Wings,ORB,1.5,2.1,0,0,0.3,0,0,WIND
+Shelved Scroll,TOME,1,0,0,0,0,1.24,1.24,WIND
+Sickle of Scorched Iron,SPEAR,1.5,2.1,0,0,0,0,0.5,FIRE
+Sifter of Misery,SPEAR,1.5,2.1,0,0,0.3,0,0,WIND
+Silence of Souls,ORB,1.5,1.7,0,0,0,0,0,WIND
+Silent Desire,SWORD,1,2,0,0,0,0,0,WIND
+Sinner's Manuscript,TOME,1,0,0,0.96,0.96,0,0,FIRE
+Silver Hand Mirror,ORB,1.5,2.3,0,0,0,0,0,WIND
+Silver Tome,TOME,1,0,0,0,1.05,0,0,FIRE
+Silver Axe,TOME,1.5,2.1,0,0.3,0,0,0,WATER
+Slothful God's Harp,HARP,2,0,0,0,0,0.72,0.72,FIRE
+Snowflake Spear,SPEAR,1.5,2.1,0,0,0,0,0,WATER
+Snowy Corpse,TOME,1,0,0,0,0,1.66,1.66,WATER
+Soul Eater's Light Sickle,SPEAR,1.5,2.1,0,0,0,0,0.5,WIND
+Soul Shell,HAMMER,1.5,2.1,0,0.3,0,0,0,WATER
+Spear of Devotion,SPEAR,1.5,1.5,0,0,0.3,0,0,WATER
+Spear of Languor,SPEAR,1.5,2.1,0,0,0.3,0,0,WATER
+Spear of Love and Hate,SPEAR,1.5,1.4,0,0,0,0,0,WIND
+Spear of the Endtimes,SPEAR,1.5,1.7,0,0,0,0,0,FIRE
+Spellbook of Reversal,TOME,1,0,0,0,0,1.36,0,WATER
+Spider Web Staff,STAFF,1,0,2.78,0,0,0,0.5,WIND
+Staff of Bondage,STAFF,1,0,2.78,0,0.3,0,0,WATER
+Staff of Deep Prayer,STAFF,2,0,2.25,0,0,0,0,WATER
+Staff of Delusion,STAFF,1,0,2.78,0,0,0.5,0,FIRE
+Staff of Gluttony,STAFF,1.5,0,2.34,0,0,0,0.5,WATER
+Staff of Incarnation,STAFF,2,0,2.25,0,0,0,0,WIND
+Staff of Insanity,STAFF,1,0,1.8,0,0,0,0,WATER
+Staff of Masochism,STAFF,1,0,2.25,0,0,0,0,WATER
+Staff of Piety,STAFF,1,0,2.78,0,0.3,0,0,WIND
+Staff of Retrogression,STAFF,2,0,1.5,0,0,0,0,FIRE
+Staff of Submission,STAFF,1,0,2.25,0,0,0,0,FIRE
+Staff of Succession,STAFF,2,0,2.25,0,0,0,0,WATER
+Staff of the Wise,STAFF,1.5,0,1.35,0,0,0,0,WIND
+Steel Flute,HARP,2,0,0,0,0,0,1.2,WATER
+Steel Star,HAMMER,1.5,1.5,1.2,0,0,0,0,WIND
+Straw Puppet,ORB,1.5,1.7,0,0,0,0,0,FIRE
+Strongman's Hammer,HAMMER,1.5,1.4,0,0,0,0,0,FIRE
+Study of Yggdrasil,TOME,2,0,0,0,0,0.58,0.58,WATER
+Substitute Bow,BOW,1,2.7,0,0,0,0,0,WIND
+Sweet Release Cake,ORB,1.5,2.1,0,0,0.3,0,0,WIND
+Sweet Release Gun,BOW,1,2.5,0,0,0,0,0.5,FIRE
+Sweet Release Harp,HARP,1,0,0,0,0,1.66,1.66,WATER
+Sword of Bondage,SWORD,1,2.7,0,0,0,0,0,WATER
+Sword of Burned Metal,SWORD,1,2.5,0,0,0,0.5,0,FIRE
+Sword of Delusion,SWORD,1,2.5,0,0.3,0,0,0,WIND
+Sword of Humility,SWORD,1,2.5,1.2,0,0,0,0,WATER
+Sword of Languor,SWORD,1,2.5,0,0.3,0,0,0,WATER
+Sword of Love and Hate,SWORD,1,2.5,1.2,0,0,0,0,WATER
+Sword of Memory,SWORD,1,1.6,0,0,0,0,0,WIND
+Sword of Misery,SWORD,1,1.8,1.2,0,0,0,0,WATER
+Sword of Necessary Evil,SWORD,1,1.6,0,0,0,0,0,FIRE
+Sword of Revenge,SWORD,1,2,0,0.3,0,0,0,FIRE
+Sword of Ripples,SWORD,1,2.5,0,0.3,0,0,0,WATER
+Sword of Sacrifice,SWORD,1,1.6,0,0,0,0,0,WATER
+Sword of Suppression,SWORD,1,2.7,0,0,0,0,0,WIND
+Swordsmith's Spellbook,SWORD,1,2.7,0,0,0,0,0,FIRE
+Sympathetic Blade,SWORD,1,2.5,1.2,0,0,0,0,WIND
+Tale of The Phoenix,TOME,1.5,0,0,0,0,0,1.5,FIRE
+Tear Jar,ORB,1.5,2.1,0,0,0,0,0.5,WATER
+The Bard and the Fairy,HARP,1,0,0,0.54,0.54,0,0,WIND
+The Destroyer,BOW,1,2.7,0,0,0,0,0,WATER
+The Emperor's Hegemony,HAMMER,1.5,2.1,0,0,0,0.5,0,WATER
+The Lord's Hammer,HAMMER,1.5,2.3,0,0,0,0,0,WATER
+The Lost Spear,SPEAR,1.5,1.7,0,0,0,0,0,WATER
+The Wolf's Offering,SPEAR,1.5,1.4,0,0,0,0,0,FIRE
+Thirst for War,SPEAR,1.5,1.5,1.2,0,0,0,0,FIRE
+Thorn of Brutality,SPEAR,1.5,2.1,0,0,0.3,0,0,FIRE
+Time Remaining,ORB,1.5,2.3,0,0,0,0,0,WIND
+Tome of Absolution,TOME,1,0,0,0,1.05,0,0,FIRE
+Tome of Bondage,TOME,1.5,0,0,0,0,1.5,0,FIRE
+Tome of Dependence,TOME,1,0,0,0.7,0.7,0,0,FIRE
+Tome of Ice,TOME,2,0,0,0,0.66,0,0,WATER
+Tome of Visions,TOME,1,0,0,0.54,0.54,0,0,WATER
+Torture Doctrine,TOME,1,0,0,0,0,1.24,1.24,WATER
+Torus Spear,SPEAR,1.5,1.5,0,0,0.3,0,0,WATER
+Tracker's Bow,BOW,1,2.7,0,0,0,0,0,FIRE
+Tragedy of the Wicked,SWORD,1,1.6,0,0,0,0,0,WIND
+Tunnel Treasure Chest,ORB,1.5,1.4,0,0,0,0,0,FIRE
+Turbulent Mace,HAMMER,1.5,2.1,0,0,0,0.5,0.5,WATER
+Twilight Glow,HARP,2,0,0,0,0,0.72,0.72,WATER
+Type-3 Lance,SPEAR,1.5,1.7,0,0,0,0,0,WATER
+Type-40 Blade,SWORD,1,2.7,0,0,0,0,0,WATER
+Underworld's Elegy,HARP,1.5,0,0,0,0.9,0,0,FIRE
+Unjustified Resentment,BOW,1,2,0,0,0,0,0,WIND
+Usumidori,HAMMER,1.5,2.1,0,0.3,0.3,0,0,FIRE
+Veteran's Cannon,BOW,1,2.5,0,0,0.3,0,0,WATER
+Veteran's Mallet,HAMMER,1.5,1.5,0,0.3,0,0,0,FIRE
+Vigilante's Pride,BOW,1,1.6,0,0,0,0,0,WATER
+Vile Axe,HAMMER,1.5,1.7,0,0,0,0,0,WIND
+Villain's Book,TOME,1.5,0,0,0,0.9,0,0,WATER
+Violin of Bondage,HARP,1,0,0,1.06,0,0,0,FIRE
+Violin of Justice,HARP,1,0,0,0.96,0.96,0,0,WIND
+Violin of Zeal,HARP,1.5,0,0,0,0,0,0,FIRE
+Virgin's Spinal Fluid,ORB,1.5,2.1,0,0,0.3,0,0,WATER
+Virtuous Contract,SWORD,1,2.5,1.2,0,0,0,0,WATER
+Voltage Dictionary,TOME,1.5,0,0,0,0,1.36,1.36,WIND
+Waking Nightmare,HAMMER,1.5,1.7,0,0,0,0,0,WIND
+War Axe of Wicked Love,HAMMER,1.5,2.1,0,0.3,0,0,0,FIRE
+War Song's Echo,HARP,1,0,0,0.7,0.7,0,0,FIRE
+Warden's Mallet,HAMMER,1.5,2.3,0,0,0,0,0,FIRE
+Water Emperor's Staff,STAFF,1,0,2.25,0,0,0,0,WATER
+Waterfowl Bow,BOW,1,1.6,0,0,0,0,0,WATER
+Waterway Sword,SWORD,1,2,0,0,0,0,0,WATER
+Weapon of the Apocalypse,SPEAR,1.5,2.3,0,0,0,0,0,WATER
+Werewolf's Lie,BOW,1,2,0,0,0,0,0,WATER
+Wheel of Brutality,SWORD,1,1.8,1.2,0,0,0,0,WATER
+Wheel of Perpetuity,ORB,1.5,1.7,0,0,0,0,0,WATER
+White Bow of Justice,BOW,1,2.5,0,0,0,0,0.5,FIRE
+White Lightning Staff,STAFF,1,0,1.8,0,0,0,0,WIND
+White Staff of Justice,STAFF,1.5,0,2.33,0,0,0,0,WATER
+White Tome,TOME,1,0,0,0.54,0.54,0,0,WIND
+Whitecap Bow,BOW,1,2.7,0,0,0,0,0,WATER
+Wild Rose Harp,HARP,2,0,0,0,0,0.72,0.72,WIND
+Wind King's Gale,BOW,1,2.5,0,0,0,0,0.5,WIND
+Winged Darkness,SPEAR,1.5,2.1,0,0,0.3,0,0,WATER
+Wiseman's Notes,TOME,1,0,0,0,0,1.24,1.24,WIND
+Wolf Strings of Depravity,HARP,1.5,0,0,0.98,0.98,0,0,WIND
+Wreath of Dependence,HARP,1.5,0,0,0.9,0,0,0,WATER
+Zealot's Grudge,ORB,1.5,1.4,0,0,0,0,0,WIND
+Zweihänder of Justice,SWORD,1,2.5,0,0.3,0,0,0,WATER
