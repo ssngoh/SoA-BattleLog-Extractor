@@ -1,7 +1,7 @@
 # SoA-BattleLog-Extractor
 Extracts and parses colo battle logs from Sinoalice. 
 
-Read the wiki for information on how to use
+Read the wiki for information on how to use and setup.
 
 ## Credits  
 I would like to thank my guildmates at Stellar for making me a much better person. It is of no understatement that without them, this project will never have been started  
@@ -14,7 +14,7 @@ I would like to thank my guildmates at Stellar for making me a much better perso
 **Yuuki** - Discord Emoji manager  
 **PikaSushii** - Finally evolved from just plain Sushii  
 **Howard** - 180 pulls and no Kaguya hammer + class. Got 4 orbs called Path Of Regret.  
-**Pichu** - I hope you devolve into a sever rat one day.  
+**Pichu** - Colo CPU checker.  
 **GhiBli** - You've grown a lot, my young padawan.  
 **Reine** - I see you have a lot more confidence in yourself now. :)  
 **Nyxia** - Probably saved us more than we can count.  
