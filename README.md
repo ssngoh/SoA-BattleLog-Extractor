@@ -5,6 +5,7 @@ Read the wiki for information on how to use and setup.
 
 ## Credits  
 I would like to thank my guildmates at Stellar for making me a much better person. It is of no understatement that without them, this project will never have been started  
+## Stellar Members      
 **Ibis** - GM  
 **Shizuru** - Sub  
 **SWXY aka Oi** - The prodigal son.  
