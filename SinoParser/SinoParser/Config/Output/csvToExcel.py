@@ -66,7 +66,7 @@ csvToRead = pyexcel.get_sheet(file_name='relationshipTable.csv')
 	#if there are really 2 names that differ by case, then you'll need to go to the friend/enemy NameSelfCorrectingConfig.txt to change them
 
 for row in csvToRead:
-	print(row)
+	#print(row)
 	if "**" in str(row[0]):
 		name = row[0]
 		name = name.replace("*","")
@@ -92,7 +92,7 @@ for row in csvToRead:
 	content[name] += array
 	
 
-print(content)
+#print(content)
 book = pyexcel.get_book(bookdict=content)
 book.save_as("output.xls")
 
