@@ -15,10 +15,12 @@
 (1D
 (IDI
 (II
+(LI)
 (Il)
 (11)
 (IL)
 (IDI)
+UW)
 (lI)
 (①
 (1D)
@@ -129,6 +131,7 @@ Cxorcist's
 [lames
 *Focus
 Tocus
+Fucus
 *Formation
 *Gale
 *God's
@@ -161,6 +164,7 @@ M.AIK
 M.DEI
 M.DLF
 *Mental
+Metal
 *Mist
 *Nocturne
 *of
@@ -212,6 +216,7 @@ Staif
 *Support
 support
 Suppurt
+SUppoOrt
 Sup ort
 *Square
 *Technique

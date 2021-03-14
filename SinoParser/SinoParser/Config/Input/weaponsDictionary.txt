@@ -1,4 +1,32 @@
 Name,Type,targets,damage,recovery,patk,matk,pdef,mdef,Elemental
+Raging Blue Waters,BOW,1,2.5,0,0,0,0,0.5,WATER
+Sound of Entwining,HARP,2,0,0,0.6,0.6,0,0,WIND
+Parasitic Book of Delusion,TOME,1.5,0,0,0.9,0,0,0,WIND
+Club of Rotten Rope,HAMMER,1.5,2.1,0,0.3,0.3,0,0,WIND
+Divine Wind Staff,STAFF,1.5,0,2.34,0.3,0,0,0,WATER
+Staff of Curiosity,STAFF,1.5,0,2.34,0,0,0,0.5,FIRE
+Wizard's Sickle,SPEAR,1.5,2.1,0,0,0,0,0.5,WATER
+Truth and Lies,STAFF,2,0,2.15,0,0.3,0,0,FIRE
+Book of Otherworldly Lights,TOME,1.5,0,0,0,0,1.5,0,FIRE
+Great Sword of Decay,SWORD,1,2.5,0,0.3,0,0,0,FIRE
+Wicked Hare's Path,HARP,2,0,0,0,0,1.28,1.28,WATER
+Spear of Lost Souls,SPEAR,1.5,2.1,0,0,0,0,0.5,WATER
+Breath of Rebirth,STAFF,2,0,2.04,0,0,0,0.5,WIND
+Chords of Steel,HARP,1.5,0,0,0,0.84,0,1.36,FIRE
+Glass Sphere,HAMMER,1.5,2.1,0,0.3,0,0,0,WATER
+Shizu's Sword,SWORD,1,2.7,0,0,0,0,0,WATER
+Coax of the Cosmos,HARP,1,0,0,0.7,0.7,0,0,WATER
+Plume Harp,HARP,1.5,0,0,0.98,0.98,0,0,WIND
+Book of Kraken,TOME,2,0,0,0.6,0.6,0,0,WATER
+Rimuru's Spell Book,TOME,1.5,0,0,0,0.9,0,0,WATER
+Headhunter's Sickle,SPEAR,1.5,2.1,0,0,0,0,0.5,WIND
+Iron Ball of Misery,HAMMER,1.5,2.1,0,0.3,0.3,0,0,WATER
+Shuna's Wand,STAFF,2,0,2.25,0,0,0,0,WATER
+Spear of Depravity,SPEAR,1.5,2.1,0,0,0.3,0,0,WATER
+Book of the Flame Spirit,TOME,1.5,0,0,0.84,0.84,0,0,FIRE
+Book of Moral Instruction,TOME,1.5,0,0,0.84,0.84,0,0,WATER
+Toxic Snake Spear,SPEAR,1.5,2.1,0,0,0.3,0,0,WATER
+Ogre of Bondage Spear,SPEAR,1.5,2.3,0,0,0,0,0,WATER
 Holy Water Rite,HARP,1.5,0,0,0,0,0,1.5,WATER
 Trumpet Gun of Depravity,HARP,1.5,0,0,0,0.9,0,0,WATER
 Bow of Wilderness,BOW,1,2.5,0,0,0,0,0,WIND
@@ -477,3 +505,4 @@ Wolf Strings of Depravity,HARP,1.5,0,0,0.98,0.98,0,0,WIND
 Wreath of Dependence,HARP,1.5,0,0,0.9,0,0,0,WATER
 Zealot's Grudge,ORB,1.5,1.4,0,0,0,0,0,WIND
 Zweihänder of Justice,SWORD,1,2.5,0,0.3,0,0,0,WATER
+Zweihander of Justice,SWORD,1,2.5,0,0.3,0,0,0,WATER

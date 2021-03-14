@@ -51,12 +51,14 @@ Axc
 *Bludgeon
 *Blue
 *Bondage
+Bundage
 *Bonding
 *Book
 Buuk
 Buvk
 *Bow
 *Breeze
+Breczc
 *Brutal
 *Brutality
 *Brutality's
@@ -105,11 +107,14 @@ Cunflagration
 *Crystal
 *Cumbersome
 *Curiosity
+Curiasity
 *Cursed
 *Dagger
 *Dancer's
 *Dark
 *Darkness
+Darkuniess
+Varkness
 *Dead
 *Death
 *Death-Bringing
@@ -119,6 +124,7 @@ Cunflagration
 *Decimation
 *Deep
 *Defiant
+Vetiant
 *Delusion
 *Demon
 *Demonic
@@ -159,6 +165,7 @@ Later's
 *Entrails
 *Everlasting
 *Evil
+Lvil
 *Excess
 *Executioner's
 Executioncr's
@@ -204,6 +211,7 @@ Tlute
 *Glow
 *Gluttonous
 Gluttunvuus
+Ciuttonous
 *Gluttony
 *God's
 Gud's
@@ -232,6 +240,7 @@ Ilarpy's
 *Head
 *Heart
 *Heatwave
+Ileatwave
 *Hegemony
 *Hero's
 *Hollow
@@ -270,9 +279,12 @@ insect
 *Instrument
 *Intellect
 *Intent
+intent
 *Invader's
+Invader''s
 *Iron
 *Irrational
+Intutortal
 *Irreconcilable
 *Jar
 *Javelin
@@ -281,6 +293,7 @@ insect
 *Judgment
 *Jug
 *Justice
+Tustice
 *Kainé's
 *Kamaitachi's
 *Key
@@ -332,6 +345,7 @@ Masochism''s
 *Miracle
 *Mirror
 *Miserable
+Miscrable
 *Misery
 *Modern
 *Monk's
@@ -381,6 +395,7 @@ Penctrating
 *Pipe
 *Pistol
 *Plume
+vlume
 *Poet's
 *Popola's
 Popola''s
@@ -395,6 +410,7 @@ Popola''s
 *Prophecy
 Prophecy’
 *Prosperity
+Prospcrity
 *Pulverizer
 *Puppet
 *Puppeteer's
@@ -476,6 +492,7 @@ Sinner''s
 *Slothful
 *Snake
 *Snowflake
+ahowilake
 *Snowy
 *Song
 *Song's
@@ -494,6 +511,7 @@ Spcear
 Statf
 Statt
 Staii
+Stait
 Staif
 *Star
 *Steel
@@ -527,6 +545,7 @@ Swordsmith''s
 *to
 *Tome
 *Tool
+'lool
 *Torture
 *Torus
 *Tracker's
