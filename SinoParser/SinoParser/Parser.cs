@@ -17,6 +17,7 @@ namespace SinoParser
         REVIVE,
         SWAP,
         SELF_REVIVE,
+        CHANGED_GEAR_SET,
         UNKNOWN, //we will need to log this
     }
 
@@ -83,12 +84,16 @@ namespace SinoParser
         // This would mean in Arco Key -> Ibis Key -> relation patk + 100
         private Dictionary<string, Dictionary<string, Relation>> gv_relationDictionary = new Dictionary<string, Dictionary<string, Relation>>();
 
-        //Outer key is name of player. Inner key is weapon name
-        private Dictionary<string, Dictionary<string,WeaponDetails>> gv_weaponHash = new Dictionary<string, Dictionary<string,WeaponDetails>>();
+        //Outer key is name of player as well as is grid swapped. Inner key is weapon name
+        private Dictionary<(string,bool), Dictionary<string,WeaponDetails>> gv_weaponHash = new Dictionary<(string,bool), Dictionary<string,WeaponDetails>>();
 
         //Stores all action blocks for the entire colo battle
         private List<StoreColoCombatDetails> gv_coloEntireCombatDetails = new List<StoreColoCombatDetails>();
         private Dictionary<string, List<StoreColoCombatDetails>> gv_individualColoCombatDetails = new Dictionary<string, List<StoreColoCombatDetails>>();
+        
+        //Store which grids were changed this block. We need to store this because the blocks are read from latest to earliest
+        private Dictionary<string, bool> gv_gridSwappedThisBlock = new Dictionary<string, bool>();
+        private Dictionary<(string, bool), Dictionary<string, WeaponDetails>> gv_weaponsAddedThisBlock = new Dictionary<(string, bool), Dictionary<string, WeaponDetails>>();
 
         private HashSet<string> gv_skillsDictionary = new HashSet<string>();
         private Dictionary<string, string> gv_relationCorrectionDictionary = new Dictionary<string, string>();
@@ -96,6 +101,8 @@ namespace SinoParser
         private Dictionary<string, string> gv_weaponsCorrectionDictionary = new Dictionary<string, string>();
         private Dictionary<string, string> gv_skillNumbersSelfCorrectionDictionary = new Dictionary<string, string>();
         private Dictionary<string, string> gv_nameSelfCorrectionDictionary = new Dictionary<string, string>();
+        private Dictionary<string, bool> gv_isGridSwapped = new Dictionary<string, bool>();
+        
         private HashSet<string> gv_nameFilterDictionary = new HashSet<string>();
 
         private string gv_folder;
@@ -132,7 +139,8 @@ namespace SinoParser
         List<StoreColoStats> gv_storeRelationStats = new List<StoreColoStats>();
 
         //Store previous relation variables. Used to check for duplicates
-        List<StoreColoStats> gv_storePreviousRelationStats = new List<StoreColoStats>();
+        //List<StoreColoStats> gv_storePreviousRelationStats = new List<StoreColoStats>();
+        Queue<StoreColoStats> gv_storePreviousRelationStats = new Queue<StoreColoStats>();
 
         //For exporting
         Exporter gv_Exporter;
@@ -242,7 +250,7 @@ namespace SinoParser
                                 break;
                         }
 
-                        Console.WriteLine("Correct text is " + correctText);
+                       // Console.WriteLine("Correct text is " + correctText);
                     }
                     else
                     {
@@ -295,6 +303,8 @@ namespace SinoParser
 
             Console.WriteLine("File is " + file);
 
+            ResetAnalyseVariables();
+
             AnalyseLines();
 
 
@@ -344,8 +354,8 @@ namespace SinoParser
 
         public void ExportWeaponElementalSummary()
         {
-            gv_Exporter.ExportWeaponElementalSummary(gv_weaponHash);
-
+            gv_Exporter.ExportWeaponElementalSummary(gv_weaponHash, true);
+            gv_Exporter.ExportWeaponElementalSummary(gv_weaponHash, false);
         }
         public void ExportRelationshipTable()
         {
@@ -388,6 +398,9 @@ namespace SinoParser
             gv_storeColoCombatDetailsForBlock.Clear();
             gv_storePreviousRelationStats.Clear();
 
+            gv_gridSwappedThisBlock.Clear();
+            gv_weaponsAddedThisBlock.Clear();
+
             gv_lastFileBlocksFound = 0;
 
         }
@@ -401,6 +414,7 @@ namespace SinoParser
             gv_storeWeaponString = string.Empty;
             gv_storeSupportWeaponString.Clear();
             gv_storeRelationStats.Clear();
+
         }
 
         private void PreAnalyseLastLines()
@@ -509,6 +523,17 @@ namespace SinoParser
                                 break;
 
                             case BlockType.UNKNOWN: //Need to log this down somewhere
+                                gv_skipBlock = true;
+                                break;
+
+                            case BlockType.CHANGED_GEAR_SET:
+                                //In case changing gear sets appears at the last line of the page, then we may have duplicates
+                                 if(!gv_isGridSwapped.ContainsKey(gv_name))
+                                    gv_isGridSwapped.Add(gv_name, true);
+
+                                if (!gv_gridSwappedThisBlock.ContainsKey(gv_name))
+                                    gv_gridSwappedThisBlock.Add(gv_name, true);
+
                                 gv_skipBlock = true;
                                 break;
 
@@ -637,11 +662,12 @@ namespace SinoParser
                                 //We need to compare and check if our current relation is the same. 
                                 //If it is means its a duplicate and we ignore the entire block (Not 100% foolproof but will work until we change the taking of screenshots
                                 bool duplicate = false;
+                                List<StoreColoStats> tempStoreColoStatsFromQueue = gv_storePreviousRelationStats.ToList();
                                 for (int s = 0; s < gv_storeRelationStats.Count; ++s)
                                 {
-                                    for (int s2 = 0; s2 < gv_storePreviousRelationStats.Count; ++s2)
+                                    for (int s2 = 0; s2 < tempStoreColoStatsFromQueue.Count; ++s2)
                                     {
-                                        if (gv_storeRelationStats[s] == gv_storePreviousRelationStats[s2])
+                                        if (gv_storeRelationStats[s] == tempStoreColoStatsFromQueue[s2])
                                         {
                                             duplicate = true;
                                             break;
@@ -681,20 +707,32 @@ namespace SinoParser
                                 ParseWeapon(gv_storeSupportWeaponString[s], false);
 
                             for (int s = 0; s < gv_storeRelationStats.Count; ++s)
+                            {
                                 if (ParseRelation(gv_storeRelationStats[s].coloStatsString, gv_storeRelationStats[s].relation))
-                                    gv_storePreviousRelationStats.Add(new StoreColoStats(gv_storeRelationStats[s]));
+                                {
+                                    if (gv_storePreviousRelationStats.Count >= 30)
+                                        gv_storePreviousRelationStats.Dequeue();
+
+                                    gv_storePreviousRelationStats.Enqueue(new StoreColoStats(gv_storeRelationStats[s]));
+                                }
+                            }
+                                    
                         }
                         else
                         {
                             //WriteToErrorLog("Mastery not found " + linesToAnalyse[i]);
                             --gv_blockCount;
                         }
+
+                        
                     }
                 }  //End of else from header gotten check
 
             } //End of first for
 
-         }
+            FixWeaponIfGridChanged();
+
+        }
 
         StatsRelation DoesLineContainStatsRelation(ref string line)
         {
@@ -950,23 +988,49 @@ namespace SinoParser
 
         void UpdateWeapon(string weaponName, string skillName = "", uint coloSkillLevel = 0, uint coloSupportSkillLevel = 0)
         {
-            if(!gv_weaponHash.ContainsKey(gv_name))
-                gv_weaponHash.Add(gv_name, new Dictionary<string, WeaponDetails>());
+            bool isGridSwapped = gv_isGridSwapped.ContainsKey(gv_name) ? gv_isGridSwapped[gv_name] : false;
 
-            if (gv_weaponHash[gv_name].ContainsKey(weaponName))
+            if (!gv_weaponHash.ContainsKey((gv_name, isGridSwapped)))
+                gv_weaponHash.Add((gv_name, isGridSwapped), new Dictionary<string, WeaponDetails>());
+
+            if (gv_weaponHash[(gv_name, isGridSwapped)].ContainsKey(weaponName))
             {
                 if (coloSkillLevel > 0)
-                    gv_weaponHash[gv_name][weaponName].SetColoSkillLevel(coloSkillLevel);
+                    gv_weaponHash[(gv_name, isGridSwapped)][weaponName].SetColoSkillLevel(coloSkillLevel);
 
                 if (coloSupportSkillLevel > 0)
-                    gv_weaponHash[gv_name][weaponName].SetColoSupportLevel(coloSupportSkillLevel);
+                    gv_weaponHash[(gv_name, isGridSwapped)][weaponName].SetColoSupportLevel(coloSupportSkillLevel);
 
-                if(skillName.Length > 0)
-                    gv_weaponHash[gv_name][weaponName].SetSkillName(skillName);
+                if (skillName.Length > 0)
+                    gv_weaponHash[(gv_name, isGridSwapped)][weaponName].SetSkillName(skillName);
             }
             else
             {
-                gv_weaponHash[gv_name].Add(weaponName, new WeaponDetails(weaponName, skillName, coloSkillLevel, coloSupportSkillLevel));
+                gv_weaponHash[(gv_name, isGridSwapped)].Add(weaponName, new WeaponDetails(weaponName, skillName, coloSkillLevel, coloSupportSkillLevel));
+
+                //We ignore support skill procs. We will sort it out at the end during the exporting part
+               // if (skillName.Length > 0)
+               //     return;
+
+                if (!gv_weaponsAddedThisBlock.ContainsKey((gv_name, isGridSwapped)))
+                    gv_weaponsAddedThisBlock.Add((gv_name, isGridSwapped), new Dictionary<string, WeaponDetails>());
+
+                gv_weaponsAddedThisBlock[(gv_name, isGridSwapped)].Add(weaponName, new WeaponDetails(weaponName, skillName, coloSkillLevel, coloSupportSkillLevel));
+            }
+
+            //We ignore support skill procs. We will sort it out at the end during the exporting part
+            if (skillName.Length > 0)
+                return;
+
+            // if (!gv_weaponsAddedThisBlock.ContainsKey((gv_name, isGridSwapped)))
+            //     gv_weaponsAddedThisBlock.Add((gv_name, isGridSwapped), new Dictionary<string, WeaponDetails>());
+
+            if (gv_weaponsAddedThisBlock.ContainsKey((gv_name, isGridSwapped)))
+            {
+                if (gv_weaponsAddedThisBlock[(gv_name, isGridSwapped)].ContainsKey(weaponName))
+                    gv_weaponsAddedThisBlock[(gv_name, isGridSwapped)][weaponName].OverrideDetailsIfHigher(gv_weaponHash[(gv_name, isGridSwapped)][weaponName]);
+            //    else
+              //      gv_weaponsAddedThisBlock[(gv_name, isGridSwapped)].Add(weaponName, new WeaponDetails(gv_weaponHash[(gv_name, isGridSwapped)][weaponName]));
             }
         }
 
@@ -1003,6 +1067,61 @@ namespace SinoParser
             }
             else
                 gv_storeColoCombatDetailsForBlock[last].receiverStatsModification[targetedName].Add(new CombatRelation(amount, relation));
+        }
+
+        void FixWeaponIfGridChanged()
+        {
+            foreach(KeyValuePair<string,bool> kvp in gv_gridSwappedThisBlock)
+            {
+                if(gv_weaponsAddedThisBlock.ContainsKey((kvp.Key,true)) || gv_weaponsAddedThisBlock.ContainsKey((kvp.Key, false)))
+                {
+                    //Over here means we have found weapons that were added as true before grid swapping for a particular player
+                    if (gv_weaponsAddedThisBlock.ContainsKey((kvp.Key, true)))
+                        foreach (KeyValuePair<string, WeaponDetails> kvpInner in gv_weaponsAddedThisBlock[(kvp.Key, true)])
+                            gv_weaponHash[(kvp.Key, true)].Remove(kvpInner.Key);
+
+                    if (gv_weaponsAddedThisBlock.ContainsKey((kvp.Key, false)))
+                        foreach (KeyValuePair<string, WeaponDetails> kvpInner in gv_weaponsAddedThisBlock[(kvp.Key, false)])
+                            gv_weaponHash[(kvp.Key, false)].Remove(kvpInner.Key);  
+                }
+            }
+
+            foreach (KeyValuePair<string, bool> kvp in gv_gridSwappedThisBlock)
+            {
+                if (gv_weaponsAddedThisBlock.ContainsKey((kvp.Key, true)))
+                {
+                    //Over here means we have found weapons that were added as true before grid swapping for a particular player
+                    foreach (KeyValuePair<string, WeaponDetails> kvpInner in gv_weaponsAddedThisBlock[(kvp.Key, true)])
+                    {
+                        //gv_weaponHash[(kvp.Key, true)].Remove(kvpInner.Key);
+
+                        if (!gv_weaponHash.ContainsKey((kvp.Key, false)))
+                            gv_weaponHash.Add((kvp.Key, false), new Dictionary<string, WeaponDetails>());
+
+                        if (gv_weaponHash[(kvp.Key, false)].ContainsKey(kvpInner.Key))
+                            gv_weaponHash[(kvp.Key, false)][kvpInner.Key].OverrideDetailsIfHigher(kvpInner.Value);
+                        else
+                            gv_weaponHash[(kvp.Key, false)][kvpInner.Key] = new WeaponDetails(kvpInner.Value);
+                       
+                    }
+                }
+                else if (gv_weaponsAddedThisBlock.ContainsKey((kvp.Key, false)))
+                {
+                    foreach (KeyValuePair<string, WeaponDetails> kvpInner in gv_weaponsAddedThisBlock[(kvp.Key, false)])
+                    {
+                        //gv_weaponHash[(kvp.Key, false)].Remove(kvpInner.Key);
+
+                        if (!gv_weaponHash.ContainsKey((kvp.Key, true)))
+                            gv_weaponHash.Add((kvp.Key, true), new Dictionary<string, WeaponDetails>());
+
+                        if (gv_weaponHash[(kvp.Key, true)].ContainsKey(kvpInner.Key))
+                            gv_weaponHash[(kvp.Key, true)][kvpInner.Key].OverrideDetailsIfHigher(kvpInner.Value);
+                        else
+                            gv_weaponHash[(kvp.Key, true)][kvpInner.Key] = new WeaponDetails(kvpInner.Value);
+                    
+                    }
+                }
+            }
         }
 
         void PopulateColoBattleData()
@@ -1134,6 +1253,8 @@ namespace SinoParser
                 return BlockType.SWAP;
             else if (line.Contains("HP recovered", StringComparison.OrdinalIgnoreCase))
                 return BlockType.SELF_REVIVE;
+            else if (line.Contains("changed gear set", StringComparison.OrdinalIgnoreCase))
+                return BlockType.CHANGED_GEAR_SET;
 
             return BlockType.NORMAL;
         }

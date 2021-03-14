@@ -13,20 +13,46 @@ namespace SinoParser
 
         }
 
-        public void ExportWeaponHash(Dictionary<string, Dictionary<string, WeaponDetails>> weaponHash, bool includeWeaponSummary = false)
+        public void ExportWeaponHash(Dictionary<(string, bool), Dictionary<string, WeaponDetails>> weaponHash, bool includeWeaponSummary = false)
         {
             var friendlyWeaponHashLog = new StreamWriter(Utilities.processDirectory + "/weaponHashFriendly.txt");
             var enemyWeaponHashLog = new StreamWriter(Utilities.processDirectory + "/weaponHashEnemy.txt");
             var weaponHashLogAll = new StreamWriter(Utilities.processDirectory+"/weaponHash.txt");
             StreamWriter weaponHashLog = null;
 
-            foreach (KeyValuePair<string, Dictionary<string, WeaponDetails>> kvp in weaponHash)
+            var flagForDeletion = new Dictionary<(string, bool), List<string>>();
+
+            //Delete away colo level 0 weapons
+            foreach (KeyValuePair<(string,bool), Dictionary<string, WeaponDetails>> kvp in weaponHash)
+            {
+                foreach(KeyValuePair<string, WeaponDetails> kvpInner in kvp.Value)
+                {
+                    if (kvpInner.Value.GetColoSkillLevel() == 0)
+                    {
+                        flagForDeletion.TryAdd(kvp.Key, new List<string>() );
+                        flagForDeletion[kvp.Key].Add(kvpInner.Key);
+                    }     
+                }
+            }
+
+            foreach (KeyValuePair<(string, bool), List<string>> kvp in flagForDeletion)
+            {
+                if(weaponHash.ContainsKey(kvp.Key))
+                {
+                    for (int i = 0; i < kvp.Value.Count; ++i)
+                    {
+                        weaponHash[kvp.Key].Remove(kvp.Value[i]);
+                    }
+                }
+            }
+
+            foreach (KeyValuePair<(string,bool), Dictionary<string, WeaponDetails>> kvp in weaponHash)
             {
                 if (includeWeaponSummary)
                 {
-                    if (Utilities.IsEnemy(kvp.Key))
+                    if (Utilities.IsEnemy(kvp.Key.Item1))
                         weaponHashLog = enemyWeaponHashLog;
-                    else if (Utilities.IsFriendly(kvp.Key))
+                    else if (Utilities.IsFriendly(kvp.Key.Item1))
                         weaponHashLog = friendlyWeaponHashLog;
                     else
                         continue;
@@ -36,9 +62,9 @@ namespace SinoParser
 
                 weaponHashLog.WriteLine("****" + kvp.Key + "****");
 
-                if(includeWeaponSummary && Utilities.isPlayerVG(kvp.Key))
+                if(includeWeaponSummary && Utilities.isPlayerVG(kvp.Key.Item1))
                 {
-                    ExportWeaponHashVG(ref weaponHashLog, kvp.Key, kvp.Value);
+                    ExportWeaponHashVG(ref weaponHashLog, kvp.Key.Item1, kvp.Value);
                     //weaponHashLog.WriteLine("-------------------------------------------------------------------");
                     weaponHashLog.WriteLine();
                     continue;
@@ -100,11 +126,11 @@ namespace SinoParser
                         Tuple<Stats, ElementalType, WeaponType> weaponStats;
 
                         if (weaponType == WeaponType.HARP || weaponType == WeaponType.TOME)
-                            weaponStats = Utilities.GetBuffDebuffWeaponEffectiveness(kvp.Key, kvpInner.Value, sbMultiplier);
+                            weaponStats = Utilities.GetBuffDebuffWeaponEffectiveness(kvp.Key.Item1, kvpInner.Value, sbMultiplier);
                         else if (weaponType == WeaponType.STAFF)
-                            weaponStats = Utilities.GetStaffWeaponEffectiveness(kvp.Key, kvpInner.Value, recoveryMultiplier);
+                            weaponStats = Utilities.GetStaffWeaponEffectiveness(kvp.Key.Item1, kvpInner.Value, recoveryMultiplier);
                         else
-                            weaponStats = Utilities.GetOtherWeaponEffectiveness(kvp.Key, kvpInner.Value); //Not in used atm 
+                            weaponStats = Utilities.GetOtherWeaponEffectiveness(kvp.Key.Item1, kvpInner.Value); //Not in used atm 
 
                         if (weaponStats.Item2 == ElementalType.FIRE)
                         {
@@ -196,12 +222,12 @@ namespace SinoParser
 
                     if(sbMultiplier > recoveryMultiplier)
                         weaponHashLog.WriteLine(string.Format("Weapon effectiveness: SB multiplier {0}. PATK {1}. PDEF {2}. MATK {3}. MDEF {4}.", sbMultiplier, 
-                                                Utilities.GetInitialStats(kvp.Key).patk, Utilities.GetInitialStats(kvp.Key).pdef,
-                                                Utilities.GetInitialStats(kvp.Key).matk, Utilities.GetInitialStats(kvp.Key).mdef));
+                                                Utilities.GetInitialStats(kvp.Key.Item1).patk, Utilities.GetInitialStats(kvp.Key.Item1).pdef,
+                                                Utilities.GetInitialStats(kvp.Key.Item1).matk, Utilities.GetInitialStats(kvp.Key.Item1).mdef));
                     else
                         weaponHashLog.WriteLine(string.Format("Weapon effectiveness: RS multiplier {0}. PATK {1}. PDEF {2}. MATK {3}. MDEF {4}.", recoveryMultiplier,
-                                                Utilities.GetInitialStats(kvp.Key).patk, Utilities.GetInitialStats(kvp.Key).pdef,
-                                                Utilities.GetInitialStats(kvp.Key).matk, Utilities.GetInitialStats(kvp.Key).mdef));
+                                                Utilities.GetInitialStats(kvp.Key.Item1).patk, Utilities.GetInitialStats(kvp.Key.Item1).pdef,
+                                                Utilities.GetInitialStats(kvp.Key.Item1).matk, Utilities.GetInitialStats(kvp.Key.Item1).mdef));
 
                     weaponHashLog.WriteLine("-------------------------------------------------------------------");
                     weaponHashLog.WriteLine(string.Format(fire, fireWeapons));
@@ -625,11 +651,13 @@ namespace SinoParser
 
         }
 
-        public void ExportWeaponElementalSummary(Dictionary<string, Dictionary<string, WeaponDetails>> weaponHash)
+        public void ExportWeaponElementalSummary(Dictionary<(string,bool), Dictionary<string, WeaponDetails>> weaponHash, bool preSwap)
         {
-            var friendlyWeaponHashCSV = new StreamWriter(Utilities.processDirectory + "/friendlyWeaponElementalSummary.csv");
-            var enemyWeaponHashCSV = new StreamWriter(Utilities.processDirectory + "/enemyWeaponElementalSummary.csv");
-            var weaponHashLog = new StreamWriter(Utilities.processDirectory + "/weaponBuffDebuffElementalSummary.txt");
+            string prePostString = preSwap ? "pre_" : "post_";
+
+            var friendlyWeaponHashCSV = new StreamWriter(Utilities.processDirectory + "/" + prePostString + "friendlyWeaponElementalSummary.csv");
+            var enemyWeaponHashCSV = new StreamWriter(Utilities.processDirectory + "/" + prePostString + "enemyWeaponElementalSummary.csv");
+            var weaponHashLog = new StreamWriter(Utilities.processDirectory + "/" + prePostString + "weaponBuffDebuffElementalSummary.txt");
 
             int friendlyFireWeapons = 0;
             int friendlyWaterWeapons = 0;
@@ -685,9 +713,52 @@ namespace SinoParser
 
             int enemyBonusComboWeapons = 0;
 
-            foreach (KeyValuePair<string, Dictionary<string, WeaponDetails>> kvp in weaponHash)
+            var flagForDeletion = new Dictionary<(string, bool), List<string>>();
+
+            //Delete away colo level 0 weapons
+            foreach (KeyValuePair<(string, bool), Dictionary<string, WeaponDetails>> kvp in weaponHash)
+            {
+                foreach (KeyValuePair<string, WeaponDetails> kvpInner in kvp.Value)
+                {
+                    if (kvpInner.Value.GetColoSkillLevel() == 0)
+                    {
+                        flagForDeletion.TryAdd(kvp.Key, new List<string>());
+                        flagForDeletion[kvp.Key].Add(kvpInner.Key);
+                    }
+                }
+            }
+
+            foreach (KeyValuePair<(string, bool), List<string>> kvp in flagForDeletion)
+            {
+                if (weaponHash.ContainsKey(kvp.Key))
+                {
+                    for (int i = 0; i < kvp.Value.Count; ++i)
+                    {
+                        Console.WriteLine("Removed weapon " + kvp.Value[i]);
+                        weaponHash[kvp.Key].Remove(kvp.Value[i]);
+                    }
+                }
+            }
+
+            foreach (KeyValuePair<(string,bool), Dictionary<string, WeaponDetails>> kvp in weaponHash)
             {
                 // weaponHashLog.WriteLine("****************************************" + kvp.Key + "****************************************");
+
+                if(preSwap)
+                {
+                    //We want when kvp.key.item2 is false.True we ignore
+                     if (kvp.Key.Item2)
+                        continue;
+                }
+                else
+                {
+                    //We want when kvp.key.item2 is true. False we ignore unless they have never swapped
+                    if(!kvp.Key.Item2)
+                    {
+                        if(weaponHash.ContainsKey((kvp.Key.Item1, true)))
+                            continue;
+                    }
+                }
 
                 int fireWeapons = 0, fireStaves = 0, fireVGWeapons = 0;
                 int waterWeapons = 0, waterStaves = 0, waterVGWeapons = 0;
@@ -715,11 +786,11 @@ namespace SinoParser
                     Tuple<Stats, ElementalType, WeaponType> weaponStats;
 
                     if (weaponType == WeaponType.HARP || weaponType == WeaponType.TOME)
-                        weaponStats = Utilities.GetBuffDebuffWeaponEffectiveness(kvp.Key, kvpInner.Value, boonMultiplier);
+                        weaponStats = Utilities.GetBuffDebuffWeaponEffectiveness(kvp.Key.Item1, kvpInner.Value, boonMultiplier);
                     else if (weaponType == WeaponType.STAFF)
-                        weaponStats = Utilities.GetStaffWeaponEffectiveness(kvp.Key, kvpInner.Value, recoveryMultiplier);
+                        weaponStats = Utilities.GetStaffWeaponEffectiveness(kvp.Key.Item1, kvpInner.Value, recoveryMultiplier);
                     else
-                        weaponStats = Utilities.GetOtherWeaponEffectiveness(kvp.Key, kvpInner.Value);
+                        weaponStats = Utilities.GetOtherWeaponEffectiveness(kvp.Key.Item1, kvpInner.Value);
 
                     if (weaponStats.Item2 == ElementalType.FIRE)
                     {
@@ -787,7 +858,7 @@ namespace SinoParser
                     comboWeapons = Utilities.CheckIfComboWeapon(kvpInner.Value.GetWeaponName()) ? comboWeapons + 1 : comboWeapons;
                 }
 
-                if (Utilities.IsFriendly(kvp.Key))
+                if (Utilities.IsFriendly(kvp.Key.Item1))
                 {
                     friendlyFireStatsbuff += fireStatsbuff;
                     friendlyWaterStatsbuff += waterStatsbuff;
@@ -816,7 +887,7 @@ namespace SinoParser
                     friendlyBonusComboWeapons += comboWeapons;
 
                 }
-                else if (Utilities.IsEnemy(kvp.Key))
+                else if (Utilities.IsEnemy(kvp.Key.Item1))
                 {
                     enemyFireStatsbuff += fireStatsbuff;
                     enemyWaterStatsbuff += waterStatsbuff;

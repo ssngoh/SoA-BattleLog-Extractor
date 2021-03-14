@@ -815,6 +815,7 @@ namespace SinoParser
             this.coloSkillLevel = coloSkillLevel;
             this.coloSupportLevel = coloSupportLevel;
             weaponType = Utilities.GetWeaponType(weaponName);
+
         }
 
         public WeaponDetails(WeaponDetails wd)
@@ -838,6 +839,27 @@ namespace SinoParser
         public void SetSkillName(string skillName)
         {
             this.skillName = skillName;
+        }
+
+        public void OverrideDetails(WeaponDetails wd)
+        {
+            this.weaponName = wd.weaponName;
+            this.skillName = wd.skillName;
+            this.coloSkillLevel = wd.coloSkillLevel;
+            this.coloSupportLevel = wd.coloSupportLevel;
+            this.weaponType = wd.weaponType;
+        }
+
+        public void OverrideDetailsIfHigher(WeaponDetails wd)
+        {
+            if (coloSkillLevel == 0)
+                coloSkillLevel = wd.coloSkillLevel;
+
+            if (coloSupportLevel == 0)
+                coloSupportLevel = wd.coloSupportLevel;
+
+            if (skillName.Length == 0)
+                skillName = wd.skillName;
         }
 
         public override int GetHashCode()
