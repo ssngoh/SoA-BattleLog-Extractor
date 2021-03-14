@@ -19,6 +19,9 @@ set imagesStr2=
 set imagesStr3=
 set imagesStr4=
 set imagesStr5=
+set imagesStr6=
+set imagesStr7=
+
 goto ParseImage
 
 :ParseImage
@@ -57,7 +60,22 @@ for /r %%i in (*) do (
 	if %%~ni EQU 104 magick convert %%~ni.png -gravity South -chop 0x1104 +repage 104_1.png
 	if !loop! EQU 104 set "imagesStr4=!imagesStr4! 104_1.png"
 
-	if !loop! GEQ 104 set "imagesStr5=!imagesStr5! !loop!.png"
+	if !loop! GEQ 104 (
+		if !loop! LSS 130 set "imagesStr5=!imagesStr5! !loop!.png"
+	)
+
+	if %%~ni EQU 130 magick convert %%~ni.png -gravity South -chop 0x1104 +repage 130_1.png
+	if !loop! EQU 130 set "imagesStr5=!imagesStr5! 130_1.png"
+
+	if !loop! GEQ 130 (
+		if !loop! LSS 156 set "imagesStr6=!imagesStr6! !loop!.png"
+	)
+
+
+	if %%~ni EQU 156 magick convert %%~ni.png -gravity South -chop 0x1104 +repage 156_1.png
+	if !loop! EQU 156 set "imagesStr6=!imagesStr6! 156_1.png"
+
+	if !loop! GEQ 156 set "imagesStr7=!imagesStr7! !loop!.png"
 
 	set /a loop=!loop!+1
 
@@ -112,6 +130,26 @@ magick convert -units PixelsPerInch out5.png -density 300 out5.png
 magick convert out5.png -morphology erode diamond:1 out5.png
 
 magick convert out5.png -sharpen 0x1 out5.png
+
+echo !imagesStr6!
+magick convert -append !imagesStr6! out6.png
+magick convert out6.png -bordercolor White -border 10x10 out6.png
+magick convert out6.png -alpha off out6.png
+magick convert -units PixelsPerInch out6.png -density 300 out6.png
+
+magick convert out6.png -morphology erode diamond:1 out6.png
+
+magick convert out6.png -sharpen 0x1 out6.png
+
+echo !imagesStr7!
+magick convert -append !imagesStr7! out7.png
+magick convert out7.png -bordercolor White -border 10x10 out7.png
+magick convert out7.png -alpha off out7.png
+magick convert -units PixelsPerInch out7.png -density 300 out7.png
+
+magick convert out7.png -morphology erode diamond:1 out7.png
+
+magick convert out7.png -sharpen 0x1 out7.png
 
 if %currentPage% LSS %totalPages% goto GoNextFolder
 cd %currentDir%

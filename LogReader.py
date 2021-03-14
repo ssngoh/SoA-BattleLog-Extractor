@@ -49,6 +49,16 @@ for x in range(1,int(sys.argv[1])+1):
 		textFile.write('\n')
 		textFile.close()
 
+	with open(path+"/tesseractOutput.txt", "a", encoding='utf-8') as textFile:
+		textFile.write(pytesseract.image_to_string(Image.open(path+'/out6.png'),config=custom_oem_psm_config))
+		textFile.write('\n')
+		textFile.close()
+
+	with open(path+"/tesseractOutput.txt", "a", encoding='utf-8') as textFile:
+		textFile.write(pytesseract.image_to_string(Image.open(path+'/out7.png'),config=custom_oem_psm_config))
+		textFile.write('\n')
+		textFile.close()
+
 # French text image to string
 #print(pytesseract.image_to_string(Image.open('test-european.jpg'), lang='fra'))
 
