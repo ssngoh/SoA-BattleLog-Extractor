@@ -20,7 +20,7 @@ I would like to thank my guildmates at Stellar for making me a much better perso
 **Reine** - I see you have a lot more confidence in yourself now. :)  
 **Nyxia** - Probably saved us more than we can count.  
 **Tellus** - Doesn't react to Tell us jokes zzz.  
-**Bwed** - Thanks for mercing for us! I hope you enjoyed your stay as well as GC $_$.  
+**Bwed** - Thanks for mercing for us! I hope you enjoyed your stay as well as GC
   
 ## Stellar Alumni   
 **Ark**  
